@@ -1,9 +1,9 @@
 ==================================================
- bitcoin-python - Easy-to-use Bitcoin API client.
+ dogecoin-python - Easy-to-use Dogecoin API client.
 ==================================================
 
-``bitcoin-python`` is a set of Python libraries that allows easy access to the
-bitcoin_ peer-to-peer cryptocurrency client API.
+``dogecoin-python`` is a set of Python libraries that allows easy access to the
+dogecoin_ peer-to-peer cryptocurrency client API.
 
 Contents:
 
@@ -20,5 +20,5 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-.. _bitcoin: https://www.bitcoin.org/
+.. _dogecoin: http://dogecoin.com/
 

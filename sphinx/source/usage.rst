@@ -2,52 +2,52 @@
  Usage
 =================
 
-See also the `main bitcoin documentation`_ for details and background on setting up and
-using bitcoind remotely.
+See also the `main dogecoin documentation`_ for details and background on setting up and
+using dogecoind remotely.
 
-Setting up bitcoin for remote control
+Setting up dogecoin for remote control
 -------------------------------------
 
-If you run Bitcoin with the ``-server`` argument, or if you run ``bitcoind``, it can be controlled 
+If you run Dogecoin with the ``-server`` argument, or if you run ``dogecoind``, it can be controlled 
 either by sending it HTTP-JSON-RPC commands.
 
-However, beginning with Bitcoin 0.3.3 you must create a ``bitcoin.conf`` file in the Bitcoin data directory 
-(default ``$HOME/.bitconf``) and set an RPC password:
+However, beginning with Dogecoin 0.3.3 you must create a ``dogecoin.conf`` file in the Dogecoin data directory 
+(default ``$HOME/.dogeconf``) and set an RPC password:
 
 ::
 
   rpcuser=anything
   rpcpassword=anything
 
-Once that is done, the easiest way to check whether Bitcoin accepts remote commands is by running 
-Bitcoin again, with the command (and any parameters) as arguments. For example:
+Once that is done, the easiest way to check whether Dogecoin accepts remote commands is by running 
+Dogecoin again, with the command (and any parameters) as arguments. For example:
 
 ::
 
-  $ bitcoind getinfo
+  $ dogecoind getinfo
 
 Connecting to the wallet from Python
 -------------------------------------
 
 There are two functions for this:
 
-*Connecting to local bitcoin instance*
-  Use the function :func:`~bitcoinrpc.connect_to_local`. This automagically
-  sorts out the connection to a bitcoin process running on the current machine,
+*Connecting to local dogecoin instance*
+  Use the function :func:`~dogecoinrpc.connect_to_local`. This automagically
+  sorts out the connection to a dogecoin process running on the current machine,
   for the current user.
   
   ::
   
-    conn = bitcoinrpc.connect_to_local()
+    conn = dogecoinrpc.connect_to_local()
 
-*Connecting to a remote bitcoin instance*
-  Use the function :func:`~bitcoinrpc.connect_to_remote`. For this function
+*Connecting to a remote dogecoin instance*
+  Use the function :func:`~dogecoinrpc.connect_to_remote`. For this function
   it is neccesary to explicitly specify a hostname and port to connect to, and
   to provide user credentials for logging in.
 
   ::
   
-    conn = bitcoinrpc.connect_to_remote('foo', 'bar', host='payments.yoyodyne.com', port=8332)
+    conn = dogecoinrpc.connect_to_remote('foo', 'bar', host='payments.yoyodyne.com', port=8332)
 
 
 How to use the API
@@ -56,14 +56,14 @@ How to use the API
 For basic sending and receiving of payments, the four most important methods are 
 
 *Getting the current balance*
-  Use the method :func:`~bitcoinrpc.connection.BitcoinConnection.getbalance` to get the current server balance.
+  Use the method :func:`~dogecoinrpc.connection.DogecoinConnection.getbalance` to get the current server balance.
   
   ::
   
     print "Your balance is %f" % (conn.getbalance(),)
 
 *Check a customer address for validity and get information about it*
-  This can be done with the method :func:`~bitcoinrpc.connection.BitcoinConnection.validateaddress`.
+  This can be done with the method :func:`~dogecoinrpc.connection.DogecoinConnection.validateaddress`.
 
   ::
 
@@ -74,7 +74,7 @@ For basic sending and receiving of payments, the four most important methods are
           print "The address that you provided is invalid, please correct"
 
 *Sending payments*
-  The method :func:`~bitcoinrpc.connection.BitcoinConnection.sendtoaddress` sends a specified
+  The method :func:`~dogecoinrpc.connection.DogecoinConnection.sendtoaddress` sends a specified
   amount of coins to a specified address.
 
   ::
@@ -82,7 +82,7 @@ For basic sending and receiving of payments, the four most important methods are
       conn.sendtoaddress("msTGAm1ApjEJfsWfAaRVaZHRm26mv5GL73", 20.0)
 
 *Get a new address for accepting payments*
-  To accept payments, use the method :func:`~bitcoinrpc.connection.BitcoinConnection.getnewaddress`
+  To accept payments, use the method :func:`~dogecoinrpc.connection.DogecoinConnection.getnewaddress`
   to generate a new address. Give this address to the customer and store it in a safe place, to be able to check
   when the payment to this address has been made.
 
@@ -92,8 +92,8 @@ For basic sending and receiving of payments, the four most important methods are
       print "We will ship the pirate sandwidth after payment of 200 coins to ", pay_to
 
 *Check how much has been received at a certain address*
-  The method :func:`~bitcoinrpc.connection.BitcoinConnection.getreceivedbyaddress` 
-  returns how many bitcoins have been received at a certain address. Together with the
+  The method :func:`~dogecoinrpc.connection.DogecoinConnection.getreceivedbyaddress` 
+  returns how many dogecoins have been received at a certain address. Together with the
   previous function, this can be used to check whether a payment has been made
   by the customer.
 
@@ -108,7 +108,7 @@ For basic sending and receiving of payments, the four most important methods are
       
 The account API
 -------------------------------------
-More advanced usage of bitcoin allows multiple accounts within one wallet. This
+More advanced usage of dogecoin allows multiple accounts within one wallet. This
 can be useful if you are writing software for a bank, or 
 simply want to have a clear separation between customers payments.
 

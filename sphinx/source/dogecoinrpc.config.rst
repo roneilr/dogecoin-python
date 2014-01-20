@@ -1,7 +1,7 @@
-:mod:`bitcoinrpc.config` --- Utilities for reading bitcoin configuration files
+:mod:`dogecoinrpc.config` --- Utilities for reading dogecoin configuration files
 ====================================================================================
 
-.. automodule:: bitcoinrpc.config
+.. automodule:: dogecoinrpc.config
    :members:
    :show-inheritance:
    

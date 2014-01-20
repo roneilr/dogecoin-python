@@ -1,13 +1,17 @@
-dogecoin-python is a set of Python libraries that allows easy access to the
+dogecoin-python is a fork of [bitcoin-python](https://github.com/laanwj/bitcoin-python)
+
+It is a set of Python libraries that allows easy access to the
 dogecoin peer-to-peer cryptocurrency client API.
+
 
 Documentation
 ===========================
 
-Documentation can be found here, or in the source archive. It is built
-using Sphinx:
+The orignal documentation for bitcoin-python can be found here :
 
 http://laanwj.github.com/bitcoin-python/doc/
+
+The dogecoin-pyton documentation can be found in the source archive. It is built using Sphinx.
 
 Installation instructions
 ===========================

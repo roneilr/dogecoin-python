@@ -6,9 +6,7 @@ setup(
     long_description='This package allows performing commands such as listing the current balance'
     ' and sending coins to the Satoshi (original) client from Python. The communication with the'
     ' client happens over JSON-RPC.',
-    maintainer='Wladimir van der Laan',
-    maintainer_email='laanwj@gmail.com',
-    url='http://laanwj.github.com/dogecoin-python/doc/',
+    url='https://github.com/jcsaaddupuy/dogecoin-python',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',

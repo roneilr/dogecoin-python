@@ -1,7 +1,7 @@
-:mod:`bitcoinrpc.exceptions` --- Exception definitions
+:mod:`dogecoinrpc.data` --- Dogecoin RPC service, data objects
 ====================================================================================
 
-.. automodule:: bitcoinrpc.exceptions
+.. automodule:: dogecoinrpc.data
    :members:
    :show-inheritance:
-      
+   
