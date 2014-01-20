@@ -1,5 +1,5 @@
-bitcoin-python is a set of Python libraries that allows easy access to the
-bitcoin peer-to-peer cryptocurrency client API.
+dogecoin-python is a set of Python libraries that allows easy access to the
+dogecoin peer-to-peer cryptocurrency client API.
 
 Documentation
 ===========================
@@ -12,7 +12,7 @@ http://laanwj.github.com/bitcoin-python/doc/
 Installation instructions
 ===========================
 
-bitcoin-python uses setuptools for the install script. There are no dependencies apart from Python itself.
+dogecoin-python uses setuptools for the install script. There are no dependencies apart from Python itself.
 
 ::
 
@@ -22,15 +22,15 @@ bitcoin-python uses setuptools for the install script. There are no dependencies
 Pypi / Cheeseshop
 ==================
 
-It is possible to install the package through Pypi (cheeseshop), see http://pypi.python.org/pypi?:action=display&name=bitcoin-python
+It is possible to install the package through Pypi (cheeseshop), see http://pypi.python.org/pypi?:action=display&name=dogecoin-python
 
 ::
 
-  $ pip install bitcoin-python
+  $ pip install dogecoin-python
 
 TODO
 ======
 These things still have to be added:
 
-- SSL support (including certificate verification) for managing remote bitcoin daemons.
+- SSL support (including certificate verification) for managing remote dogecoin daemons.
 
