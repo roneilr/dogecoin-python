@@ -18,40 +18,40 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 """
-bitcoin-python - Easy-to-use Bitcoin API client
+dogecoin-python - Easy-to-use Dogecoin API client
 """
 
 
 def connect_to_local(filename=None):
     """
-    Connect to default bitcoin instance owned by this user, on this machine.
+    Connect to default dogecoin instance owned by this user, on this machine.
 
-    Returns a :class:`~bitcoinrpc.connection.BitcoinConnection` object.
+    Returns a :class:`~dogecoinrpc.connection.DogecoinConnection` object.
 
     Arguments:
 
         - `filename`: Path to a configuration file in a non-standard location (optional)
     """
-    from bitcoinrpc.connection import BitcoinConnection
-    from bitcoinrpc.config import read_default_config
+    from dogecoinrpc.connection import DogecoinConnection
+    from dogecoinrpc.config import read_default_config
 
     cfg = read_default_config(filename)
     if cfg is None:
         cfg = {}
-    port = int(cfg.get('rpcport', '18332' if cfg.get('testnet') else '8332'))
+    port = int(cfg.get('rpcport', '18332' if cfg.get('testnet') else '22555'))
     rpcuser = cfg.get('rpcuser', '')
     rpcpassword = cfg.get('rpcpassword', '')
 
-    return BitcoinConnection(rpcuser, rpcpassword, 'localhost', port)
+    return DogecoinConnection(rpcuser, rpcpassword, 'localhost', port)
 
 
-def connect_to_remote(user, password, host='localhost', port=8332,
+def connect_to_remote(user, password, host='localhost', port=22555,
                       use_https=False):
     """
-    Connect to remote or alternative local bitcoin client instance.
+    Connect to remote or alternative local dogecoin client instance.
 
-    Returns a :class:`~bitcoinrpc.connection.BitcoinConnection` object.
+    Returns a :class:`~dogecoinrpc.connection.DogecoinConnection` object.
     """
-    from bitcoinrpc.connection import BitcoinConnection
+    from dogecoinrpc.connection import DogecoinConnection
 
-    return BitcoinConnection(user, password, host, port, use_https)
+    return DogecoinConnection(user, password, host, port, use_https)
