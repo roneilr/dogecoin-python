@@ -23,14 +23,6 @@ dogecoin-python uses setuptools for the install script. There are no dependencie
   $ python setup.py build
   $ python setup.py install
 
-Pypi / Cheeseshop
-==================
-
-It is possible to install the package through Pypi (cheeseshop), see http://pypi.python.org/pypi?:action=display&name=dogecoin-python
-
-::
-
-  $ pip install dogecoin-python
 
 TODO
 ======
