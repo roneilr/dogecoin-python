@@ -50,7 +50,6 @@ class DogecoinConnection(object):
             user=user, password=password, host=host, port=port)
         self.url = url
         self.proxy = AuthServiceProxy(url, exception_wrapper=wrap_exception)
-        print(url)
 
     def stop(self):
         """
