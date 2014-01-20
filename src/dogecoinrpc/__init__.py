@@ -38,7 +38,8 @@ def connect_to_local(filename=None):
     cfg = read_default_config(filename)
     if cfg is None:
         cfg = {}
-    port = int(cfg.get('rpcport', '18332' if cfg.get('testnet') else '22555'))
+    #port = int(cfg.get('rpcport', '18332' if cfg.get('testnet') else '22555'))
+    port = int(cfg.get('rpcport', '22555'))
     rpcuser = cfg.get('rpcuser', '')
     rpcpassword = cfg.get('rpcpassword', '')
 

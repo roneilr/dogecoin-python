@@ -40,7 +40,7 @@ class DogecoinConnection(object):
     - *host* -- Dogecoin JSON-RPC host.
     - *port* -- Dogecoin JSON-RPC port.
     """
-    def __init__(self, user, password, host='localhost', port=8332,
+    def __init__(self, user, password, host='localhost', port=22555,
                  use_https=False):
         """
         Create a new dogecoin server connection.
