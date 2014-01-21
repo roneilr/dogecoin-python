@@ -1,7 +1,7 @@
-:mod:`bitcoinrpc` --- Convenience functions
+:mod:`dogecoinrpc.exceptions` --- Exception definitions
 ====================================================================================
 
-.. automodule:: bitcoinrpc
+.. automodule:: dogecoinrpc.exceptions
    :members:
    :show-inheritance:
       

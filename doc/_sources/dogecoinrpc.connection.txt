@@ -1,7 +1,8 @@
-:mod:`bitcoinrpc.data` --- Bitcoin RPC service, data objects
+:mod:`dogecoinrpc.connection` --- Connect to Dogecoin server via JSON-RPC
 ====================================================================================
 
-.. automodule:: bitcoinrpc.data
+.. automodule:: dogecoinrpc.connection
    :members:
    :show-inheritance:
-   
+
+

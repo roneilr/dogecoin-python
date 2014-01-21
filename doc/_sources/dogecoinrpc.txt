@@ -1,8 +1,7 @@
-:mod:`bitcoinrpc.connection` --- Connect to Bitcoin server via JSON-RPC
+:mod:`dogecoinrpc` --- Convenience functions
 ====================================================================================
 
-.. automodule:: bitcoinrpc.connection
+.. automodule:: dogecoinrpc
    :members:
    :show-inheritance:
-
-
+      

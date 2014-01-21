@@ -1,7 +1,7 @@
-:mod:`bitcoinrpc.util` --- Generic utilities used by bitcoin client library
+:mod:`dogecoinrpc.util` --- Generic utilities used by dogecoin client library
 ====================================================================================
 
-.. automodule:: bitcoinrpc.util
+.. automodule:: dogecoinrpc.util
    :members:
    :show-inheritance:
    
