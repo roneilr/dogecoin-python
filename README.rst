@@ -7,11 +7,10 @@ dogecoin peer-to-peer cryptocurrency client API.
 Documentation
 ===========================
 
-The orignal documentation for bitcoin-python can be found here :
+The documentation for bitcoin-python can be found here (or built from sources) :
 
-http://laanwj.github.com/bitcoin-python/doc/
+http://jcsaaddupuy.github.io/dogecoin-python/doc/index.html
 
-The dogecoin-pyton documentation can be found in the source archive. It is built using Sphinx.
 
 Installation instructions
 ===========================
