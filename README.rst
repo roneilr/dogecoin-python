@@ -38,6 +38,7 @@ Connection to dogecoin-qt
 If you want to connect to dogecoin-qt, add in your dogecoin.conf :
 
 ::
+
  server=1 
 
 TODO
