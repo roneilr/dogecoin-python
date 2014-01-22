@@ -32,6 +32,13 @@ It is possible to install the package through Pypi (cheeseshop), see http://pypi
  # if not working, try
  $ pip install --pre dogecoin-python
 
+Connection to dogecoin-qt
+=========================
+
+If you want to connect to dogecoin-qt, add in your dogecoin.conf :
+
+::
+ server=1 
 
 TODO
 ======
