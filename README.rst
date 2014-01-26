@@ -35,10 +35,11 @@ It is possible to install the package through Pypi (cheeseshop), see http://pypi
 Connection to dogecoin-qt
 =========================
 
-If you want to connect to dogecoin-qt, add in your dogecoin.conf :
+If you want to connect to dogecoin-qt, add server=1 in your dogecoin.conf :
 
 ::
-
+ rpcuser=dogecoinrpc
+ rpcpassword=A RANDOM GENERATED PASSWORD
  server=1 
 
 TODO
