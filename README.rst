@@ -39,7 +39,9 @@ If you want to connect to dogecoin-qt, add server=1 in your dogecoin.conf :
 
 ::
  rpcuser=dogecoinrpc
+
  rpcpassword=A RANDOM GENERATED PASSWORD
+
  server=1 
 
 TODO
