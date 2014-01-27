@@ -61,6 +61,8 @@ def read_default_config(filename=None):
 
         if platform.system() == "Darwin":
             location = 'Library/Application Support/Bitcoin/dogecoin.conf'
+        elif platform.system() in ('Windows', 'Microsoft'): 
+            location = '\\AppData\\Roaming\\DogeCoin\\dogecoin.conf'
         else:
             location = '.dogecoin/dogecoin.conf'
         filename = os.path.join(home, location)
