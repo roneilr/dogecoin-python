@@ -609,6 +609,19 @@ class DogecoinConnection(object):
                 return False
             raise exception
 
+    def importprivkey(self, privkey, acct='', rescan=True):
+        """
+        import private key <privkey> to account [acct], optionally rescanning blockchain .
+
+        Arguments:
+
+        - *privkey* -- private key to import.
+	- [acct] -- name of account to associate with private key
+	- [rescan] -- rescan blockchain for transcations containing altcoin address associated with privkey
+        """
+        return self.proxy.importprivkey(privkey, acct, rescan)
+
+
     def dumpprivkey(self, address):
         """
         Returns the private key belonging to <address>.
