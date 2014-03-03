@@ -1,6 +1,18 @@
+2014-03-02 17:55:05 -0600 Naveen Garg 
+
+	* add importprivkey method
+
+2014-02-26 15:34:39 -0800 Peter Harrington 
+
+	* Update config.py
+
+2014-01-28 19:58:26 +0100 Jean-Christophe Saad-Dupuy 
+
+	* updated changelog
+
 2014-01-28 19:26:06 +0100 Jean-Christophe Saad-Dupuy 
 
-	* Version bump (HEAD, tag: v0.1.2, origin/master, origin/HEAD, master)
+	* Version bump (tag: v0.1.2)
 
 2014-01-28 11:31:13 -0600 benfbat 
 
@@ -172,7 +184,7 @@
 
 2013-03-30 16:32:59 +0100 Wladimir J. van der Laan 
 
-	* bump version number to 0.3
+	* bump version number to 0.3 (tag: v0.3)
 
 2013-03-30 16:13:06 +0100 Aviad Reich 
 
@@ -312,7 +324,7 @@
 
 2011-08-24 11:20:43 +0200 Wladimir J. van der Laan 
 
-	* add license (MIT)
+	* add license (MIT) (tag: v0.2)
 
 2011-08-24 23:00:01 +0300 Wladimir J. van der Laan 
 
