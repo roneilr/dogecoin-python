@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>dogecoinrpc.connection — Connect to Dogecoin server via JSON-RPC &mdash; dogecoin-python 0.1.2 documentation</title>
+    <title>dogecoinrpc.connection — Connect to Dogecoin server via JSON-RPC &mdash; dogecoin-python 0.1.3 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.2',
+        VERSION:     '0.1.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="dogecoin-python 0.1.2 documentation" href="index.html" />
+    <link rel="top" title="dogecoin-python 0.1.3 documentation" href="index.html" />
     <link rel="up" title="API reference" href="apireference.html" />
     <link rel="next" title="dogecoinrpc.exceptions — Exception definitions" href="dogecoinrpc.exceptions.html" />
     <link rel="prev" title="dogecoinrpc — Convenience functions" href="dogecoinrpc.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="dogecoinrpc.html" title="dogecoinrpc — Convenience functions"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">dogecoin-python 0.1.2 documentation</a> &raquo;</li>
+        <li><a href="index.html">dogecoin-python 0.1.3 documentation</a> &raquo;</li>
           <li><a href="apireference.html" accesskey="U">API reference</a> &raquo;</li> 
       </ul>
     </div>  
@@ -316,6 +316,18 @@ to work on.</p>
 <p>Arguments:</p>
 <ul class="simple">
 <li><em>data</em> &#8211; Result from remote mining.</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="dogecoinrpc.connection.DogecoinConnection.importprivkey">
+<tt class="descname">importprivkey</tt><big>(</big><em>privkey</em>, <em>acct=''</em>, <em>rescan=True</em><big>)</big><a class="headerlink" href="#dogecoinrpc.connection.DogecoinConnection.importprivkey" title="Permalink to this definition">¶</a></dt>
+<dd><p>import private key &lt;privkey&gt; to account [acct], optionally rescanning blockchain .</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li><em>privkey</em> &#8211; private key to import.</li>
+<li>[acct] &#8211; name of account to associate with private key</li>
+<li>[rescan] &#8211; rescan blockchain for transcations containing altcoin address associated with privkey</li>
 </ul>
 </dd></dl>
 
@@ -666,7 +678,7 @@ to be unlocked.</p>
         <li class="right" >
           <a href="dogecoinrpc.html" title="dogecoinrpc — Convenience functions"
              >previous</a> |</li>
-        <li><a href="index.html">dogecoin-python 0.1.2 documentation</a> &raquo;</li>
+        <li><a href="index.html">dogecoin-python 0.1.3 documentation</a> &raquo;</li>
           <li><a href="apireference.html" >API reference</a> &raquo;</li> 
       </ul>
     </div>
