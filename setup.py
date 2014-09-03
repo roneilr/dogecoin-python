@@ -16,6 +16,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Topic :: Office/Business :: Financial'
     ],
+    install_requires=['urllib3'],
     packages=find_packages("src"),
     package_dir={'': 'src'}
 )
