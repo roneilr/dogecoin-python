@@ -19,10 +19,7 @@
   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 """
 
-try:
-    import http.client as httplib
-except ImportError:
-    import httplib
+import urllib3
 import base64
 try:
     import simplejson as json
@@ -50,41 +47,32 @@ class JSONRPCException(Exception):
 class HTTPTransport(object):
     def __init__(self, service_url):
         self.service_url = service_url
+        self.connection = urllib3.connection_from_url(service_url, timeout=HTTP_TIMEOUT)
         self.parsed_url = urlparse.urlparse(service_url)
-        if self.parsed_url.port is None:
-            port = 80
-        else:
-            port = self.parsed_url.port
+
         authpair = "%s:%s" % (self.parsed_url.username,
                               self.parsed_url.password)
         authpair = authpair.encode('utf8')
         self.auth_header = "Basic ".encode('utf8') + base64.b64encode(authpair)
-        if self.parsed_url.scheme == 'https':
-            self.connection = httplib.HTTPSConnection(self.parsed_url.hostname,
-                                                      port, None, None, False,
-                                                      HTTP_TIMEOUT)
-        else:
-            self.connection = httplib.HTTPConnection(self.parsed_url.hostname,
-                                                     port, False, HTTP_TIMEOUT)
 
     def request(self, serialized_data):
-        self.connection.request('POST', self.parsed_url.path, serialized_data,
-                                {'Host': self.parsed_url.hostname,
-                                 'User-Agent': USER_AGENT,
-                                 'Authorization': self.auth_header,
-                                 'Content-type': 'application/json'})
+        httpresp = self.connection.urlopen('POST', self.parsed_url.path,
+                                           headers={'Host': self.parsed_url.hostname,
+                                                    'User-Agent': USER_AGENT,
+                                                    'Authorization': self.auth_header,
+                                                    'Content-type': 'application/json'},
+                                           body=serialized_data)
 
-        httpresp = self.connection.getresponse()
         if httpresp is None:
             self._raise_exception({
                 'code': -342, 'message': 'missing HTTP response from server'})
-        elif httpresp.status == httplib.FORBIDDEN:
+        elif httpresp.status == 403:
             msg = "dogecoind returns 403 Forbidden. Is your IP allowed?"
             raise TransportException(msg, code=403,
                                      protocol=self.parsed_url.scheme,
                                      raw_detail=httpresp)
 
-        resp = httpresp.read()
+        resp = httpresp.data
         return resp.decode('utf8')
 
 
